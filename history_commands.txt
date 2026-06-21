@@ -1,0 +1,13 @@
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ -c *.cpp
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+main.cpp  math_util_impl.cpp  math_utilities.h
+main.o    math_util_impl.o    preprocessed_bin
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ math_util_impl.o main.o -o myprogram
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+main.cpp  math_util_impl.cpp  math_utilities.h  preprocessed_bin
+main.o    math_util_impl.o    myprogram
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ./myprogram 
+the result is 11
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
