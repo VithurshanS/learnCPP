@@ -11,3 +11,13 @@ the result is 11
 vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ rm ./*.o
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ -I ./headerfile_usage/ -I ./initialization/ -I ./memory_allocation/ -c main.cpp
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ ./*.o -o run
+/usr/bin/ld: ./main.o: in function `main':
+main.cpp:(.text+0x9): undefined reference to `variable_init()'
+collect2: error: ld returned 1 exit status
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls ./initialization/
+const_initialization.cpp  const_initialization.h  cpp_initialization.cpp  cpp_initialization.h  variable_initialization.cpp  variable_initialization.h
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+headerfile_usage  history_commands.txt  initialization  main.cpp 
