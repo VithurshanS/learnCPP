@@ -21,3 +21,40 @@ vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls ./initialization/
 const_initialization.cpp  const_initialization.h  cpp_initialization.cpp  cpp_initialization.h  variable_initialization.cpp  variable_initialization.h
 vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
 headerfile_usage  history_commands.txt  initialization  main.cpp 
+/////////////////////////////////////////////// compile and linking in order commands /////////////////////////////////////////
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ -I ./*/ -c main.cpp 
+main.cpp:3:10: fatal error: cpp_initialization.h: No such file or directory
+    3 | #include "cpp_initialization.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.  #### only single folder for one -I
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ -I ./memory_allocation/ -I ./headerfile_usage/ -I ./initialization/ -c main.cpp ### header file lookups for copilation 
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+const_initialization.o  cpp_memoryleak.o  history_commands.txt  main.cpp  math_util_impl.o   variable_initialization.o
+cpp_initialization.o    headerfile_usage  initialization        main.o    memory_allocation ### note to get this you need to compiled sub files cpp files
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ ./*.o -o run
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+const_initialization.o  cpp_memoryleak.o  history_commands.txt  main.cpp  math_util_impl.o   run
+cpp_initialization.o    headerfile_usage  initialization        main.o    memory_allocation  variable_initialization.o
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ./run
+a,b,c are 5 4 0
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+const_initialization.o  cpp_memoryleak.o  history_commands.txt  main.cpp  math_util_impl.o   run
+cpp_initialization.o    headerfile_usage  initialization        main.o    memory_allocation  variable_initialization.o
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls ./memory_allocation/
+cpp_memoryleak.cpp  mem_leak.h
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ rm ./*.o
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ rm run 
+other wise 
+
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+headerfile_usage  history_commands.txt  initialization  main.cpp  memory_allocation
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls memory_allocation/
+cpp_memoryleak.cpp  mem_leak.h
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ -I ./memory_allocation/ -I ./headerfile_usage/ -I ./initialization/ -c main.cpp 
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+headerfile_usage  history_commands.txt  initialization  main.cpp  main.o  memory_allocation
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ -c ./*/*.cpp
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
+const_initialization.o  cpp_memoryleak.o  history_commands.txt  main.cpp  math_util_impl.o   variable_initialization.o
+cpp_initialization.o    headerfile_usage  initialization        main.o    memory_allocation
+vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ 
