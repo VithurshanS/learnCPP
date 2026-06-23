@@ -10,7 +10,7 @@ void variable_init()
 	//direct initialization
 	int b(4.9);
 	// brace init
-	int c{5};
+	int c{};
 	std::cout<<"a,b,c are "<<a<<" "<<b<<" "<<c<<std::endl;
 
 }
