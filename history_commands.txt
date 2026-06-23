@@ -21,6 +21,8 @@ vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls ./initialization/
 const_initialization.cpp  const_initialization.h  cpp_initialization.cpp  cpp_initialization.h  variable_initialization.cpp  variable_initialization.h
 vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ ls
 headerfile_usage  history_commands.txt  initialization  main.cpp 
+
+
 /////////////////////////////////////////////// compile and linking in order commands /////////////////////////////////////////
 vithurshan@vithurshan-HP-250-G8-Notebook-PC:~/cpp_learning$ g++ -I ./*/ -c main.cpp 
 main.cpp:3:10: fatal error: cpp_initialization.h: No such file or directory
