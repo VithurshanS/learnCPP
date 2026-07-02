@@ -12,10 +12,10 @@ int main(){
 	//define_wo_init();
 	//perform_leak();
 	variable_init();
-	std::array<int,5> x{1,2,3,4,5};
-	std::array<int,4>* y;
-	y = x;
-	std::cout<<y[2]<<std::endl;
+	//std::array<int,5> x{1,2,3,4,5};
+	//std::array<int,4> y;
+	//y = x;
+	//std::cout<<y[2]<<std::endl;
 	//const_init();
 	auto v = myvector<int>();
 	v.add(4);
